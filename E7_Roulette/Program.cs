@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E7_Roulette
+namespace E8_Roulette
 {
     class Program
     {
