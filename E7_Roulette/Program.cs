@@ -10,6 +10,15 @@ namespace E8_Roulette
     {
         static void Main(string[] args)
         {
+            string input = "";
+            RouletteBoard roulette = new RouletteBoard();
+
+            do
+            {
+                roulette.Spin();
+                input = Console.ReadLine();
+            } while (input != "exit");
+            
         }
     }
 }
