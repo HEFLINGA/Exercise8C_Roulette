@@ -47,9 +47,8 @@ namespace E8_Roulette
                 }
                 else
                 {
-                    Console.WriteLine("Please enter a number that is on the Roulette board for betting (between 1 and 36) or enter 100 to leave.");
+                    Console.WriteLine("Please enter a number that is on the Roulette board for betting (between 1 and 36).");
                 }
-                
             } while (input != 100);            
         } 
     }

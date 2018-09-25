@@ -28,7 +28,7 @@ namespace E8_Roulette
         public Random rnd = new Random();        
         public Enum[] colors = new Enum[3] { Color.Red, Color.Black, Color.Green };
         public int[] numbers = new int[38] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
-            , 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 4, 35, 36, 00 };
+            , 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 4, 35, 36, 99 };
 
         public Enum AssignColor(int i)
         {
@@ -307,35 +307,34 @@ namespace E8_Roulette
         }
         public void BetCorner(int input)
         {
-            if (input == currentNumber + 3 
-                || input == currentNumber - 3
-                || input == currentNumber + 4 
-                || input == currentNumber - 4 
-                || input == currentNumber + 2 
-                || input == currentNumber - 2 
-                || input == currentNumber + 1 
-                || input == currentNumber - 1)
+            if (input == currentNumber && input == currentNumber + 1 && input == currentNumber + 3 && 
+                input == currentNumber + 4)
             {
                 countWon++;
                 corner++;
-                outPut[6] = $"{currentNumber}" +
-                    $"/{currentNumber + 1}" +
-                    $"/{currentNumber + 2}" +
-                    $"/{currentNumber + 3}, " +
-                    $"{currentNumber}" +
-                    $"{currentNumber - 3}" +
-                    $"/{currentNumber - 2}" +
-                    $"/{currentNumber + 1}, " +
-                    $"{currentNumber}" +
-                    $"/{currentNumber - 1}" +
-                    $"/{currentNumber - 3}" +
-                    $"/{currentNumber - 4}, and " +
-                    $"{currentNumber}" +
-                    $"/{currentNumber - 1}" +
-                    $"/{currentNumber + 2}" +
-                    $"/{currentNumber + 3}" +
-                    $"/{currentNumber + 4}";
+                outPut[6] = $"{input}/{currentNumber + 1}/{currentNumber + 3}/{currentNumber + 4}";
             }
+            else if (input == currentNumber && input == currentNumber + 2 && input == currentNumber + 3 &&
+                     input == currentNumber - 1)
+                 {
+                    countWon++;
+                    corner++;
+                    outPut[6] = $"{currentNumber - 1}/{input}/{currentNumber + 2}/{currentNumber + 3}";
+                 }
+            else if (input == currentNumber && input == currentNumber - 1 && input == currentNumber - 3 &&
+                     input == currentNumber - 4)
+                 {
+                    countWon++;
+                    corner++;
+                    outPut[6] = $"{currentNumber - 4}/{currentNumber - 3}/{currentNumber - 1}/{input}";
+                 }
+            else if (input == currentNumber && input == currentNumber + 1 && input == currentNumber - 3 &&
+                     input == currentNumber - 2)
+                 {
+                    countWon++;
+                    corner++;
+                    outPut[6] = $"{currentNumber - 3}/{currentNumber - 2}/{input}/{currentNumber + 1}";
+                 }
         }        
         public void PossibleBetsWon(int input)
         {
