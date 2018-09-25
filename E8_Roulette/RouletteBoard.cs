@@ -12,7 +12,7 @@ namespace E8_Roulette
         public int currentNumber = 0;
         public Enum currentColor;
         public int countWon = 0;
-        string[] output = new string[7];
+        string[] outPut = new string[7];
 
         public int numbersBet = 0;
         public int evenOdd = 0;
@@ -97,13 +97,13 @@ namespace E8_Roulette
             {
                 countWon++;
                 lowHigh++;
-                output[0] = "Low (1 - 18)";
+                outPut[0] = "Low (1 - 18)";
             }
             else if (currentNumber > 18 && currentNumber <= 36 && input > 18 && currentNumber <= 36)
             {
                 countWon++;
                 lowHigh++;
-                output[0] = "high (19 - 36)";
+                outPut[0] = "high (19 - 36)";
             }
         }
         public void BetDozen(int input)
@@ -112,19 +112,19 @@ namespace E8_Roulette
             {
                 countWon++;
                 dozens++;
-                output[1] = "Row 1 - 12";
+                outPut[1] = "Row 1 - 12";
             }
             else if (currentNumber >= 13 && input >= 13 && currentNumber < 25 && input < 25)
             {
                 countWon++;
                 dozens++;
-                output[1] = "Row 13 - 24";
+                outPut[1] = "Row 13 - 24";
             }
             else if (currentNumber >= 25 && input >= 25 && currentNumber <= 36 && input <= 36)
             {
                 countWon++;
                 dozens++;
-                output[1] = "Row 25 - 36";
+                outPut[1] = "Row 25 - 36";
             }
         }
         public void BetColumns(int input)
@@ -133,19 +133,19 @@ namespace E8_Roulette
             {
                 countWon++;
                 columns++;
-                output[2] = "First Column";
+                outPut[2] = "First Column";
             }
             else if ((input == 2 || input == 5 || input == 8 || input == 11 || input == 14 || input == 17 || input == 20 || input == 23 || input == 26 || input == 29 || input == 32 || input == 35) && (currentNumber == 2 || currentNumber == 5 || currentNumber == 8 || currentNumber == 11 || currentNumber == 14 || currentNumber == 17 || currentNumber == 20 || currentNumber == 23 || currentNumber == 26 || currentNumber == 29 || currentNumber == 32 || currentNumber == 35))
             {
                 countWon++;
                 columns++;
-                output[2] = "Second Column";
+                outPut[2] = "Second Column";
             }
             else if ((input == 3 || input == 6 || input == 9 || input == 12 || input == 15 || input == 18 || input == 21 || input == 24 || input == 27 || input == 30 || input == 33 || input == 36) && (currentNumber == 3 || currentNumber == 6 || currentNumber == 9 || currentNumber == 12 || currentNumber == 15 || currentNumber == 18 || currentNumber == 21 || currentNumber == 24 || currentNumber == 27 || currentNumber == 30 || currentNumber == 33 || currentNumber == 36))
             {
                 countWon++;
                 columns++;
-                output[2] = "Third Column";
+                outPut[2] = "Third Column";
             }
         }
         public void BetStreet(int input)
@@ -154,143 +154,142 @@ namespace E8_Roulette
             {
                 countWon++;
                 street++;
-                output[3] = "1/2/3";
+                outPut[3] = "1/2/3";
             }
             else if (currentNumber >= 4 && currentNumber < 7 && input >= 4 && input < 7)
             {
                 countWon++;
                 street++;
-                output[3] = "4/5/6";
+                outPut[3] = "4/5/6";
             }
             else if (currentNumber >= 7 && currentNumber < 10 && input >= 7 && input < 10)
             {
                 countWon++;
                 street++;
-                output[3] = "7/8/9";
+                outPut[3] = "7/8/9";
             }
             else if (currentNumber >= 10 && currentNumber < 13 && input >= 10 && input < 13)
             {
                 countWon++;
                 street++;
-                output[3] = "10/11/12";
+                outPut[3] = "10/11/12";
             }
             else if (currentNumber >= 13 && currentNumber < 16 && input >= 13 && input < 16)
             {
                 countWon++;
                 street++;
-                output[3] = "13/14/15";
+                outPut[3] = "13/14/15";
             }
             else if (currentNumber >= 16 && currentNumber < 19 && input >= 16 && input < 19)
             {
                 countWon++;
                 street++;
-                output[3] = "16/17/18";
+                outPut[3] = "16/17/18";
             }
             else if (currentNumber >= 19 && currentNumber < 22 && input >= 19 && input < 22)
             {
                 countWon++;
                 street++;
-                output[3] = "19/20/21";
+                outPut[3] = "19/20/21";
             }
             else if (currentNumber >= 22 && currentNumber < 25 && input >= 22 && input < 25)
             {
                 countWon++;
                 street++;
-                output[3] = "22/23/24";
+                outPut[3] = "22/23/24";
             }
             else if (currentNumber >= 25 && currentNumber < 28 && input >= 25 && input < 28)
             {
                 countWon++;
                 street++;
-                output[3] = "25/26/27";
+                outPut[3] = "25/26/27";
             }
             else if (currentNumber >= 28 && currentNumber < 31 && input >= 28 && input < 31)
             {
                 countWon++;
                 street++;
-                output[3] = "28/29/30";
+                outPut[3] = "28/29/30";
             }
             else if (currentNumber >= 31 && currentNumber < 34 && input >= 31 && input < 34)
             {
                 countWon++;
                 street++;
-                output[3] = "31/32/33";
+                outPut[3] = "31/32/33";
             }
             else if (currentNumber >= 34 && currentNumber < 36 && input >= 34 && input < 36)
             {
                 countWon++;
                 street++;
-                output[3] = "34/35/36";
+                outPut[3] = "34/35/36";
             }
-        }
-        
+        }        
         public void BetSixNumbers(int input)
         {
             if (currentNumber >= 1 && currentNumber < 7 && input >= 1 && input < 7)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "1/2/3/4/5/6";
+                outPut[4] = "1/2/3/4/5/6";
             }
             else if (currentNumber >= 4 && currentNumber < 10 && input >= 4 && input < 10)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "4/5/6/7/8/9";
+                outPut[4] = "4/5/6/7/8/9";
             }
             else if (currentNumber >= 7 && currentNumber < 13 && input >= 7 && input < 13)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "7/8/9/10/11/12";
+                outPut[4] = "7/8/9/10/11/12";
             }
             else if (currentNumber >= 10 && currentNumber < 16 && input >= 10 && input < 16)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "10/11/12/13/14/15";
+                outPut[4] = "10/11/12/13/14/15";
             }
             else if (currentNumber >= 13 && currentNumber < 19 && input >= 13 && input < 19)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "13/14/15/16/17/18";
+                outPut[4] = "13/14/15/16/17/18";
             }
             else if (currentNumber >= 16 && currentNumber < 22 && input >= 16 && input < 22)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "16/17/18/19/20/21";
+                outPut[4] = "16/17/18/19/20/21";
             }
             else if (currentNumber >= 19 && currentNumber < 25 && input >= 19 && input < 25)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "19/20/21/22/23/24";
+                outPut[4] = "19/20/21/22/23/24";
             }
             else if (currentNumber >= 22 && currentNumber < 28 && input >= 22 && input < 28)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "22/23/24/25/26/27";
+                outPut[4] = "22/23/24/25/26/27";
             }
             else if (currentNumber >= 25 && currentNumber < 31 && input >= 25 && input < 31)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "25/26/27/28/29/30";
+                outPut[4] = "25/26/27/28/29/30";
             }
             else if (currentNumber >= 28 && currentNumber < 34 && input >= 28 && input < 34)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "28/29/30/31/32/33";
+                outPut[4] = "28/29/30/31/32/33";
             }
             else if (currentNumber >= 31 && currentNumber <= 36 && input >= 31 && input <= 36)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "31/32/33/34/35/36";
+                outPut[4] = "31/32/33/34/35/36";
             }
         }
         public void BetSplit(int input)
@@ -303,6 +302,7 @@ namespace E8_Roulette
             {
                 countWon++;
                 split++;
+                outPut[5] = $"{currentNumber - 1}/{currentNumber + 1}/{currentNumber + 3}/{currentNumber - 3}";
             }
         }
         public void BetCorner(int input)
@@ -318,9 +318,25 @@ namespace E8_Roulette
             {
                 countWon++;
                 corner++;
+                outPut[6] = $"{currentNumber}" +
+                    $"/{currentNumber + 1}" +
+                    $"/{currentNumber + 2}" +
+                    $"/{currentNumber + 3}, " +
+                    $"{currentNumber}" +
+                    $"{currentNumber - 3}" +
+                    $"/{currentNumber - 2}" +
+                    $"/{currentNumber + 1}, " +
+                    $"{currentNumber}" +
+                    $"/{currentNumber - 1}" +
+                    $"/{currentNumber - 3}" +
+                    $"/{currentNumber - 4}, and " +
+                    $"{currentNumber}" +
+                    $"/{currentNumber - 1}" +
+                    $"/{currentNumber + 2}" +
+                    $"/{currentNumber + 3}" +
+                    $"/{currentNumber + 4}";
             }
         }        
-
         public void PossibleBetsWon(int input)
         {
             if (numbersBet == 1)
@@ -337,23 +353,31 @@ namespace E8_Roulette
             }
             if (lowHigh == 1)
             {
-                Console.WriteLine($"You would have won a {output[0]} bet");
+                Console.WriteLine($"You would have won a {outPut[0]} bet");
             }
             if (dozens == 1)
             {
-                Console.WriteLine($"You would have won a dozens bet of {output[1]}");
+                Console.WriteLine($"You would have won a dozens bet of {outPut[1]}");
             }
             if (columns == 1)
             {
-                Console.WriteLine($"You would have won a columns bet of {output[2]}");
+                Console.WriteLine($"You would have won a columns bet of {outPut[2]}");
             }
             if (street == 1)
             {
-                Console.WriteLine($"You would have won with a street bet of {output[3]}");
+                Console.WriteLine($"You would have won with a street bet of {outPut[3]}");
             }
             if (sixNumbers == 1)
             {
-                Console.WriteLine($"You would have won with a 6 Number/Double row bet of {output[4]}");
+                Console.WriteLine($"You would have won with a 6 Number/Double row bet of {outPut[4]}");
+            }
+            if (split == 1)
+            {
+                Console.WriteLine($"You would have won with a split of {outPut[5]}");
+            }
+            if (corner == 1)
+            {
+                Console.WriteLine($"You would have won with a Corner bet of {outPut[6]}");
             }
         }
     }
