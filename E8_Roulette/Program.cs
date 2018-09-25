@@ -11,7 +11,6 @@ namespace E8_Roulette
         static void Main(string[] args)
         {
             int input = 0;
-            int input2 = 0;
             RouletteBoard r = new RouletteBoard();
 
             Console.Clear();
@@ -35,7 +34,7 @@ namespace E8_Roulette
 
             Console.WriteLine($"Number: {r.currentNumber}, Color: {r.currentColor}");
             Console.WriteLine($"Possible bets to be won: {r.countWon}");
-            Console.WriteLine($"Which Bets you could possibly win: \nNumbers: {r.numbersBet}\nEven/Odd: {r.evenOdd}\nRed/Black: {r.redBlack}\nLow/High: {r.lowHigh}\nDozens: {r.dozens}\nColumns: {r.columns}\nStreet: {r.street}\n6 Numbers: {r.sixNumbers}\nSplit: {r.split}\nCorner: {r.corner}.");
+            r.PossibleBetsWon(input);
         } 
     }
 }

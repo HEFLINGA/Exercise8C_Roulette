@@ -223,74 +223,74 @@ namespace E8_Roulette
                 output[3] = "34/35/36";
             }
         }
-        // TODO - ADD STRING OUTPUTS
+        
         public void BetSixNumbers(int input)
         {
             if (currentNumber >= 1 && currentNumber < 7 && input >= 1 && input < 7)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "1/2/3/4/5/6";
             }
             else if (currentNumber >= 4 && currentNumber < 10 && input >= 4 && input < 10)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "4/5/6/7/8/9";
             }
             else if (currentNumber >= 7 && currentNumber < 13 && input >= 7 && input < 13)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "7/8/9/10/11/12";
             }
             else if (currentNumber >= 10 && currentNumber < 16 && input >= 10 && input < 16)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "10/11/12/13/14/15";
             }
             else if (currentNumber >= 13 && currentNumber < 19 && input >= 13 && input < 19)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "13/14/15/16/17/18";
             }
             else if (currentNumber >= 16 && currentNumber < 22 && input >= 16 && input < 22)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "16/17/18/19/20/21";
             }
             else if (currentNumber >= 19 && currentNumber < 25 && input >= 19 && input < 25)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "19/20/21/22/23/24";
             }
             else if (currentNumber >= 22 && currentNumber < 28 && input >= 22 && input < 28)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "22/23/24/25/26/27";
             }
             else if (currentNumber >= 25 && currentNumber < 31 && input >= 25 && input < 31)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "25/26/27/28/29/30";
             }
             else if (currentNumber >= 28 && currentNumber < 34 && input >= 28 && input < 34)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "28/29/30/31/32/33";
             }
-            else if (currentNumber >= 31 && currentNumber < 36 && input >= 31 && input < 36)
+            else if (currentNumber >= 31 && currentNumber <= 36 && input >= 31 && input <= 36)
             {
                 countWon++;
                 sixNumbers++;
-                output[4] = "";
+                output[4] = "31/32/33/34/35/36";
             }
         }
         public void BetSplit(int input)
