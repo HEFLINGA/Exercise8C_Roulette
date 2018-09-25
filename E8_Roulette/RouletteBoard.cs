@@ -28,7 +28,7 @@ namespace E8_Roulette
         public Random rnd = new Random();        
         public Enum[] colors = new Enum[3] { Color.Red, Color.Black, Color.Green };
         public int[] numbers = new int[38] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
-            , 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 4, 35, 36, 99 };
+            , 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 4, 35, 36, 37 };
 
         public Enum AssignColor(int i)
         {
@@ -57,7 +57,6 @@ namespace E8_Roulette
         }
         public void BetNumbers(int input)
         {
-            // Bet for Numbers: number of the bin
             if (input == currentNumber)
             {
                 countWon++;
@@ -295,14 +294,35 @@ namespace E8_Roulette
         public void BetSplit(int input)
         {
 
-            if (input == currentNumber - 1 
-                || input == currentNumber + 1 
-                || input == currentNumber + 3
-                || input == currentNumber - 3)
+            if (input == currentNumber - 1)
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{currentNumber - 1}/{currentNumber + 1}/{currentNumber + 3}/{currentNumber - 3}";
+                outPut[5] = $"{input}/{currentNumber - 1}";
+            }
+            else if (input == currentNumber + 1)
+            {
+                countWon++;
+                split++;
+                outPut[5] = $"{input}/{currentNumber + 1}";
+            }
+            else if (input == currentNumber + 3)
+            {
+                countWon++;
+                split++;
+                outPut[5] = $"{input}/{currentNumber + 3}";
+            }
+            else if (input == currentNumber - 3)
+            {
+                countWon++;
+                split++;
+                outPut[5] = $"{input}/{currentNumber - 3}";
+            }
+            else if (input == currentNumber)
+            {
+                countWon++;
+                split++;
+                outPut[5] = $"{input}/{currentNumber - 1}, {input}/{currentNumber + 1}, {input}/{currentNumber - 3} or {input}/{currentNumber + 3}";
             }
         }
         public void BetCorner(int input)
