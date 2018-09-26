@@ -98,7 +98,7 @@ namespace E8_Roulette
                 lowHigh++;
                 outPut[0] = "Low (1 - 18)";
             }
-            else if (currentNumber > 18 && currentNumber <= 36 && input > 18 && currentNumber <= 36)
+            else if (currentNumber > 18 && currentNumber <= 36 && input > 18 && input <= 36)
             {
                 countWon++;
                 lowHigh++;
@@ -294,31 +294,31 @@ namespace E8_Roulette
         public void BetSplit(int input)
         {
 
-            if (input == currentNumber - 1)
+            if (input == currentNumber - 1 && input != 37 && input != 0)
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{input}/{currentNumber - 1}";
+                outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 1)
+            else if (input == currentNumber + 1 && input != 37 && input != 0)
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{input}/{currentNumber + 1}";
+                outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 3)
+            else if (input == currentNumber + 3 && input != 37 && input != 0)
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{input}/{currentNumber + 3}";
+                outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber - 3)
+            else if (input == currentNumber - 3 && input != 37 && input != 0)
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{input}/{currentNumber - 3}";
+                outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber)
+            else if (input == currentNumber && input != 37 && input != 0)
             {
                 countWon++;
                 split++;

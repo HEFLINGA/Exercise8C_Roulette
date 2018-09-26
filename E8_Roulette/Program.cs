@@ -37,10 +37,14 @@ namespace E8_Roulette
                 Console.WriteLine($"Number: {r.currentNumber}, Color: {r.currentColor}");
                 Console.WriteLine($"Possible bets to be won: {r.countWon}");
                 r.PossibleBetsWon(input);
+                Console.WriteLine("Press 'enter' to continue..");
+                Console.ReadLine();
             }
             else
             {
                 Console.WriteLine("No authorized input detected. Program will now self destruct.");
+                Console.WriteLine("Press 'enter' to continue..");
+                Console.ReadLine();
             }
         } 
     }
