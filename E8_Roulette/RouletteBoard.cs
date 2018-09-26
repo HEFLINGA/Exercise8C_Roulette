@@ -300,25 +300,25 @@ namespace E8_Roulette
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 1 && input != 37 && input != 0)
+            else if (input == currentNumber + 1 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 3 && input != 37 && input != 0)
+            else if (input == currentNumber + 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber - 3 && input != 37 && input != 0)
+            else if (input == currentNumber - 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber && input != 37 && input != 0)
+            else if (input == currentNumber && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 split++;
@@ -327,29 +327,29 @@ namespace E8_Roulette
         }
         public void BetCorner(int input)
         {
-            if (input == currentNumber && input == currentNumber + 1 && input == currentNumber + 3 && 
-                input == currentNumber + 4)
+            if (input == currentNumber && input == currentNumber + 1 && input == currentNumber + 3 &&
+                input == currentNumber + 4 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 corner++;
                 outPut[6] = $"{input}/{currentNumber + 1}/{currentNumber + 3}/{currentNumber + 4}";
             }
             else if (input == currentNumber && input == currentNumber + 2 && input == currentNumber + 3 &&
-                     input == currentNumber - 1)
+                     input == currentNumber - 1 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
                     outPut[6] = $"{currentNumber - 1}/{input}/{currentNumber + 2}/{currentNumber + 3}";
                  }
             else if (input == currentNumber && input == currentNumber - 1 && input == currentNumber - 3 &&
-                     input == currentNumber - 4)
+                     input == currentNumber - 4 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
                     outPut[6] = $"{currentNumber - 4}/{currentNumber - 3}/{currentNumber - 1}/{input}";
                  }
             else if (input == currentNumber && input == currentNumber + 1 && input == currentNumber - 3 &&
-                     input == currentNumber - 2)
+                     input == currentNumber - 2 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
