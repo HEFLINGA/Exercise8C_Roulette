@@ -294,25 +294,27 @@ namespace E8_Roulette
         public void BetSplit(int input)
         {
 
-            if (input == currentNumber - 1 && input != 37 && input != 0)
+            if (input == currentNumber - 1 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0 && input != 36)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 1 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
+            else if (input == currentNumber + 1 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0 && input != 1)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber + 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
+            else if (input == currentNumber + 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0 && input != 1
+                && input != 2 && input != 3)
             {
                 countWon++;
                 split++;
                 outPut[5] = $"{input}/{currentNumber}";
             }
-            else if (input == currentNumber - 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0)
+            else if (input == currentNumber - 3 && input != 37 && input != 0 && currentNumber != 37 && currentNumber != 0 && input != 34 
+                && input != 35 && input != 36)
             {
                 countWon++;
                 split++;
@@ -322,39 +324,45 @@ namespace E8_Roulette
             {
                 countWon++;
                 split++;
-                outPut[5] = $"{input}/{currentNumber - 1}, {input}/{currentNumber + 1}, {input}/{currentNumber - 3} or {input}/{currentNumber + 3}";
+                outPut[5] = $"Any connected to this number";
             }
         }
         public void BetCorner(int input)
         {
-            if (input == currentNumber || input == currentNumber + 1 || input == currentNumber + 3 ||
+            if (input == currentNumber + 1 || input == currentNumber + 3 ||
                 input == currentNumber + 4 && currentNumber != 37 && currentNumber != 0)
             {
                 countWon++;
                 corner++;
                 outPut[6] = $"{currentNumber}/{currentNumber + 1}/{currentNumber + 3}/{currentNumber + 4}";
             }
-            else if (input == currentNumber || input == currentNumber + 2 || input == currentNumber + 3 ||
+            else if (input == currentNumber + 2 || input == currentNumber + 3 ||
                      input == currentNumber - 1 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
                     outPut[6] = $"{currentNumber - 1}/{currentNumber}/{currentNumber + 2}/{currentNumber + 3}";
                  }
-            else if (input == currentNumber || input == currentNumber - 1 || input == currentNumber - 3 ||
+            else if (input == currentNumber - 1 || input == currentNumber - 3 ||
                      input == currentNumber - 4 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
                     outPut[6] = $"{currentNumber - 4}/{currentNumber - 3}/{currentNumber - 1}/{currentNumber}";
                  }
-            else if (input == currentNumber || input == currentNumber + 1 || input == currentNumber - 3 ||
+            else if (input == currentNumber + 1 || input == currentNumber - 3 ||
                      input == currentNumber - 2 && currentNumber != 37 && currentNumber != 0)
                  {
                     countWon++;
                     corner++;
                     outPut[6] = $"{currentNumber - 3}/{currentNumber - 2}/{currentNumber}/{currentNumber + 1}";
                  }
+            else if (input == currentNumber)
+            {
+                countWon++;
+                corner++;
+                outPut[6] = $"Any off of this numbers corners";
+            }
         }        
         public void PossibleBetsWon(int input)
         {
